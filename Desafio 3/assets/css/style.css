@@ -1,0 +1,73 @@
+/* Estilo general */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+h2 {
+	text-align: center;
+	margin-top: 20px;
+}
+p {
+	margin: 0;
+}
+img {
+	max-width: 100%;
+	border-radius: 10px;
+}
+header,
+footer {
+	text-align: center;
+	padding: 20px 0;
+}
+
+/* Sección Principal */
+.main-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin: 20px 0;
+}
+.main-paragraph {
+	margin-top: 10px;
+}
+
+/* Sección de Características */
+.features {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 20px;
+}
+.feature {
+	text-align: center;
+	flex: 1;
+	margin: 10px;
+}
+.feature i {
+	font-size: 48px;
+	margin-bottom: 10px;
+}
+
+/* Galería */
+.gallery {
+	padding: 20px;
+}
+.gallery-images {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.gallery-images img {
+	max-width: 30%;
+	margin: 10px;
+}
+
+/* Footer */
+footer {
+	background-color: #333;
+	color: white;
+	padding: 20px;
+}

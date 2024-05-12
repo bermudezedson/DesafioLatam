@@ -1,0 +1,21 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.grid_container {
+  display: grid;
+}
+.grid_container .header {
+  background-color: red;
+}
+.grid_container .sidebar {
+  background-color: green;
+}
+.grid_container .grilla {
+  background-color: blue;
+}
+.grid_container .footer {
+  background-color: yellow;
+}/*# sourceMappingURL=style.css.map */

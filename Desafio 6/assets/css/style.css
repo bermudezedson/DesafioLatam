@@ -5,17 +5,54 @@
 }
 
 .grid_container {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
   display: grid;
+  grid-template-areas: "header header header header" "sidebar grilla grilla grilla" "footer footer footer footer";
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: 80px 1fr 80px;
+  min-height: 100vh;
 }
 .grid_container .header {
   background-color: red;
+  grid-area: header;
+  padding: 15px;
 }
 .grid_container .sidebar {
   background-color: green;
+  grid-area: sidebar;
+  padding: 15px;
 }
 .grid_container .grilla {
   background-color: blue;
+  padding: 15px;
+  grid-area: grilla;
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  height: calc(100vh - 160px);
+  overflow-y: auto;
+}
+.grid_container .grilla div {
+  background-color: aqua;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.grid_container .grilla div p {
+  text-align: center;
+}
+.grid_container .grilla div button {
+  border-radius: 5px;
+  padding: 8px;
+  border: none;
+  background-color: orange;
+  color: white;
+  margin-top: 0.5rem;
 }
 .grid_container .footer {
   background-color: yellow;
+  grid-area: footer;
+  padding: 15px;
 }/*# sourceMappingURL=style.css.map */

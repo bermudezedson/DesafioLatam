@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es-cl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Media Querys | Desafio 7</title>
+		<link rel="stylesheet" href="./assets/css/style.css" />
+	</head>
+	<body>
+		<header>
+			<figure class="header_title">
+				<img src="./assets/images/icon-pets.png" alt="Logo de la Web" />
+				<figcaption>
+					<h1>Pets</h1>
+				</figcaption>
+			</figure>
+
+			<div class="header_nav">
+				<input type="checkbox" name="" id="menu-btn" />
+				<label for="menu-btn">
+					<i class="fa-solid fa-bars"></i>
+				</label>
+				<nav>
+					<ul>
+						<li>inicio</li>
+						<li>catalogo</li>
+						<li>ofertas</li>
+						<li>contacto</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<section class="order">
+			<label for="ordenar-por">Ordenar por</label>
+			<select name="ordenar-por" id="ordenar-por">
+				<option value="" selected disabled>
+					Seleciona una categoría
+				</option>
+				<option value="1">Perros</option>
+				<option value="2">Gatos</option>
+				<option value="2">Aves</option>
+			</select>
+		</section>
+
+		<main>
+			<div class="card_container">
+				<img src="./assets/images/card-pets.png" alt="Perrito" />
+				<p>
+					<strong>Título</strong>
+				</p>
+				<button>Consultar...</button>
+			</div>
+		</main>
+
+		<footer>
+			<h1>pets@pets.com</h1>
+		</footer>
+	</body>
+
+	<!-- Script Font Awesome -->
+	<script
+		src="https://kit.fontawesome.com/8c0839d651.js"
+		crossorigin="anonymous"
+	></script>
+</html>

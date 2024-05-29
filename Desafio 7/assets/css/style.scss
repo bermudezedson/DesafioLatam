@@ -1,5 +1,5 @@
-$mobile: '576px';
-$desktop: '992px';
+$mobile: "576px";
+$desktop: "992px";
 
 * {
 	padding: 0;
@@ -9,12 +9,11 @@ $desktop: '992px';
 
 body {
 	display: grid;
-	grid-template-areas: 
+	grid-template-areas:
 		"header"
 		"filter"
 		"main"
-		"footer"
-	;
+		"footer";
 	grid-template-rows: 90px 77px 1fr 90px;
 	height: 100vh;
 
@@ -38,7 +37,7 @@ body {
 				text-transform: uppercase;
 			}
 		}
-		
+
 		.header_nav {
 			#menu-btn {
 				display: none;
@@ -57,7 +56,7 @@ body {
 				right: 0;
 				background-color: red;
 				height: 0;
-				transition: all .5s ease-in-out;
+				transition: all 0.5s ease-in-out;
 				overflow: hidden;
 				ul {
 					list-style: none;
@@ -68,7 +67,6 @@ body {
 				}
 			}
 		}
-
 	}
 
 	.order {
@@ -108,15 +106,14 @@ body {
 
 @media screen and (min-width: $mobile) and (max-width: $desktop) {
 	body {
-		grid-template-areas: 
+		grid-template-areas:
 			"header header header"
 			"filter main main"
-			"footer footer footer"
-		;
+			"footer footer footer";
 		grid-template-rows: 90px 1fr 90px;
 		grid-template-columns: 200px 1fr;
 
-		header {	 
+		header {
 			.header_nav {
 				#menu-btn {
 					display: none;
@@ -132,8 +129,8 @@ body {
 					background-color: transparent;
 					transition: none;
 					overflow: auto;
-					height: auto;					
-					
+					height: auto;
+
 					ul {
 						display: flex;
 						flex-flow: row;
@@ -143,26 +140,23 @@ body {
 				}
 			}
 		}
-
 	}
 }
 
 @media screen and (min-width: $desktop) {
 	body {
-		grid-template-areas: 
+		grid-template-areas:
 			"header filter filter"
 			"header main main"
-			"footer main main"
-		;
+			"footer main main";
 		grid-template-rows: 90px 1fr 90px;
 		grid-template-columns: 200px 1fr;
 
-		header {	
+		header {
 			flex-flow: column;
 			justify-content: flex-start;
-			gap: 15px; 
+			gap: 15px;
 			.header_nav {
-				
 				label {
 					display: none;
 				}
@@ -175,7 +169,6 @@ body {
 					transition: none;
 					overflow: auto;
 
-					
 					ul {
 						display: flex;
 						flex-flow: column;
@@ -193,6 +186,5 @@ body {
 				word-wrap: break-word;
 			}
 		}
-
 	}
 }

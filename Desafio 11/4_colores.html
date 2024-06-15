@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es-cl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Desafio 11 - Cuatro Colores</title>
+		<link rel="stylesheet" href="./assets/css/style.css" />
+	</head>
+	<body>
+		<div id="azul" class="color-box" style="background-color: blue"></div>
+		<div id="rojo" class="color-box" style="background-color: red"></div>
+		<div id="verde" class="color-box" style="background-color: green"></div>
+		<div
+			id="amarillo"
+			class="color-box"
+			style="background-color: yellow"
+		></div>
+		<div
+			id="key"
+			class="color-box"
+			style="background-color: white; border: 1px solid black"
+		></div>
+
+		<script>
+			const divs = document.querySelectorAll(".color-box");
+			divs.forEach((div) => {
+				div.addEventListener("click", () => {
+					div.style.backgroundColor = "black";
+				});
+			});
+
+			let color;
+			document.addEventListener("keydown", function (event) {
+				if (event.key === "a") {
+					color = "pink";
+					document.getElementById("key").style.backgroundColor =
+						color;
+				} else if (event.key === "s") {
+					color = "orange";
+					document.getElementById("key").style.backgroundColor =
+						color;
+				} else if (event.key === "d") {
+					color = "skyblue";
+					document.getElementById("key").style.backgroundColor =
+						color;
+				} else if (event.key === "q") {
+					createColoredDiv("purple");
+				} else if (event.key === "w") {
+					createColoredDiv("grey");
+				} else if (event.key === "e") {
+					createColoredDiv("brown");
+				}
+			});
+
+			function createColoredDiv(color) {
+				const newDiv = document.createElement("div");
+				newDiv.className = "color-box";
+				newDiv.style.backgroundColor = color;
+				document.body.appendChild(newDiv);
+			}
+		</script>
+	</body>
+</html>

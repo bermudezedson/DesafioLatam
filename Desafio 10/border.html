@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es-cl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Desafío 10 - Borde en Imagen</title>
+		<style>
+			body {
+				display: flex;
+				align-items: center;
+				height: 100vh;
+				justify-content: center;
+			}
+			.borde-rojo {
+				border: 2px solid red;
+			}
+		</style>
+	</head>
+
+	<body>
+		<img
+			id="mi-imagen"
+			src="./assets/images/images.png"
+			alt="DesafíoLatam"
+		/>
+
+		<script>
+			const imagen = document.querySelector("#mi-imagen");
+
+			imagen.addEventListener("click", () => {
+				if (imagen.classList.contains("borde-rojo")) {
+					imagen.classList.remove("borde-rojo");
+				} else {
+					imagen.classList.add("borde-rojo");
+				}
+			});
+		</script>
+	</body>
+</html>

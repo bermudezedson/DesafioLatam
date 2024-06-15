@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es-cl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Desafío 10 - Contador de Stickers</title>
+	</head>
+
+	<body>
+		<div>
+			<img src="https://via.placeholder.com/100" alt="Sticker 1" />
+			<input type="number" id="sticker1" min="0" max="10" value="0" />
+		</div>
+		<div>
+			<img src="https://via.placeholder.com/100" alt="Sticker 2" />
+			<input type="number" id="sticker2" min="0" max="10" value="0" />
+		</div>
+		<div>
+			<img src="https://via.placeholder.com/100" alt="Sticker 3" />
+			<input type="number" id="sticker3" min="0" max="10" value="0" />
+		</div>
+		<button id="calcular">Calcular</button>
+		<p id="resultado"></p>
+
+		<script>
+			const calcularBtn = document.querySelector("#calcular");
+			const resultadoP = document.querySelector("#resultado");
+
+			calcularBtn.addEventListener("click", () => {
+				const sticker1 =
+					parseInt(document.querySelector("#sticker1").value) || 0;
+				const sticker2 =
+					parseInt(document.querySelector("#sticker2").value) || 0;
+				const sticker3 =
+					parseInt(document.querySelector("#sticker3").value) || 0;
+
+				const totalStickers = sticker1 + sticker2 + sticker3;
+
+				if (totalStickers <= 10) {
+					resultadoP.textContent = `Llevas ${totalStickers} stickers`;
+				} else {
+					resultadoP.textContent = "Llevas demasiados stickers";
+				}
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,17 @@
+version: '3'
+services:
+  react-app:
+    build: .
+    networks:
+      - app-network
+    volumes:
+      - ./react-app:/app  # Montas el código fuente desde el host
+      - /app/node_modules # Evitas que node_modules se monte desde el host
+    working_dir: /app
+    ports:
+      - "5173:5173"
+    command: npm run dev
+
+networks:
+  app-network:
+    driver: bridge

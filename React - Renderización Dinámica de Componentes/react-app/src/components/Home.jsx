@@ -1,20 +1,41 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Header from './Header';
-//import { pizzas } from '../data/pizzas';
-//import { CardPizza } from './CardPizza';
+import React from "react";
+import PropTypes from "prop-types";
+import Header from "./Header";
+import CardPizza from "./CardPizza";
+// HOME ES PRODUCTOS
 
-const Home = (props) => {
-  	return (
+const Home = ({ productos, addToCart, removeToCart, cart }) => {
+	console.log(cart);
+
+	return (
 		<>
 			<Header />
-			<div className="container">
-				<div className="grid-productos">Home</div>
+			<div className="container py-5">
+				<div className="row">
+					<h1>Catalogo de Productos</h1>
+					<hr className="pb-3" />
+				</div>
+				<div className="grid-productos">
+					{productos?.length &&
+						productos.map((producto, key) => (
+							<CardPizza
+								key={key}
+								{...producto}
+								removeToCart={removeToCart}
+								addToCart={addToCart}
+							/>
+						))}
+				</div>
 			</div>
 		</>
-  	);
+	);
 };
 
-Home.propTypes = {};
+Home.propTypes = {
+	productos: PropTypes.array.isRequired,
+	addToCart: PropTypes.func.isRequired,
+	removeToCart: PropTypes.func.isRequired,
+	cart: PropTypes.array.isRequired,
+};
 
 export default Home;

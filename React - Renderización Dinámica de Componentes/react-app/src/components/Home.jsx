@@ -4,9 +4,7 @@ import Header from "./Header";
 import CardPizza from "./CardPizza";
 // HOME ES PRODUCTOS
 
-const Home = ({ productos, addToCart, removeToCart, cart }) => {
-	console.log(cart);
-
+const Home = ({ productos, addToCart, removeToCart }) => {
 	return (
 		<>
 			<Header />
@@ -35,7 +33,6 @@ Home.propTypes = {
 	productos: PropTypes.array.isRequired,
 	addToCart: PropTypes.func.isRequired,
 	removeToCart: PropTypes.func.isRequired,
-	cart: PropTypes.array.isRequired,
 };
 
 export default Home;

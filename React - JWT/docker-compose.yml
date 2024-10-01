@@ -1,0 +1,30 @@
+version: '3'
+services:
+  react-app:
+    build:
+      context: ./frontend
+    networks:
+      - app-network
+    volumes:
+      - ./frontend/react-app:/app  # Monta el código fuente desde el host
+      - /app/node_modules # Evita que node_modules se monte desde el host
+    working_dir: /app
+    ports:
+      - "5173:5173"
+    command: npm run dev
+  backend:
+    build:
+      context: ./backend
+    networks:
+      - app-network
+    volumes:
+      - ./backend/api:/app  # Monta el código fuente desde el host
+      - /app/node_modules # Evita que node_modules se monte desde el host
+    working_dir: /app
+    ports:
+      - "5001:5000"
+    command: npm start
+
+networks:
+  app-network:
+    driver: bridge
